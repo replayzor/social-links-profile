@@ -32,15 +32,15 @@ function ProfileLinks() {
 			{links.map((item) => {
 				const { id, name, link } = item;
 				return (
-					<button
+					<a
 						key={id}
-						type="button"
-						className="text-white hover:bg-primary-green transition-all duration-300 hover:text-neutral-offBlack cursor-pointer w-[80%] mb-4 py-3 font-normal rounded-lg bg-neutral-grey"
+						href={link}
+						target="_blank"
+						rel="noreferrer"
+						className="text-white flex flex-col hover:bg-primary-green transition-all duration-300 hover:text-neutral-offBlack cursor-pointer w-[80%] m-auto  mb-4 py-3 font-normal rounded-lg bg-neutral-grey"
 					>
-						<a href={link} target="_blank" rel="noreferrer">
-							{name}
-						</a>
-					</button>
+						{name}
+					</a>
 				);
 			})}
 		</section>
